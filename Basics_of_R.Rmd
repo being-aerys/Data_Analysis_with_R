@@ -8,3 +8,41 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+```{r}
+#create a varibale that stores 1000 random numbers picked from a normal distribution with params (0,1)
+x <- rnorm(1000)
+
+#plot using a histogram
+hist(x)
+```
+
+```{r}
+#lets see the average precipitation in 70 cities in the US using a standard R dataframe that you don't even need to load
+hist(precip,col = "steelblue")
+
+```
+
+#70 cities are the population of interest.
+#precipitation is the variable of interest.
+#Let's calculate the mean of the means. Thus, mean here is the parameter of interest.
+
+```{r}
+mean(precip)
+sd(precip)
+```
+
+However, in real life, it is impossible to collect all the samples of a population. Hence we sample a certain subset of the population and use this subset as a representative of the population and calculate necessary values such as mean/ median income, precipitation, expenditure, grade, age, etc. When we use the sample instead of the population, we call it statistic rather than a parameter.
+
+Statistical Inference: We can use the sample to infer properties of the population so long as observations are sampled at random from the population of interest.
+
+```{r}
+#Calculate the % of samples in a normal distribution with mean 20 and stdev 3 below the value of 15
+pnorm(15, mean = 20, sd = 3)
+
+```
+Roughly 4.7% of the samples will be less than 15 in this normal distribution.
+
+
+
+
